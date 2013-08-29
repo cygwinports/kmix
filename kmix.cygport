@@ -1,0 +1,10 @@
+inherit kde4
+
+NAME="kmix"
+VERSION=4.10.5
+RELEASE=1
+CATEGORY="KDE"
+SUMMARY="KDE audio mixer"
+DESCRIPTION="Part of the KDE multimedia suite"
+
+PATCH_URI="4.7.0-cmake-install.patch"
