@@ -8,3 +8,5 @@ SUMMARY="KDE audio mixer"
 DESCRIPTION="Part of the KDE multimedia suite"
 
 PATCH_URI="14.12.3-cmake-install.patch"
+
+REQUIRES="kde-runtime"
