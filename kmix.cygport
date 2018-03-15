@@ -1,12 +1,10 @@
-inherit kde4
+inherit kf5
 
 NAME="kmix"
-VERSION=17.08.3
+VERSION=17.12.3
 RELEASE=1
 CATEGORY="KDE"
 SUMMARY="KDE audio mixer"
 DESCRIPTION="Part of the KDE multimedia suite"
 
-PATCH_URI="14.12.3-cmake-install.patch"
-
-REQUIRES="kde-runtime"
+PATCH_URI="17.12-cmake-install.patch"

@@ -1,0 +1,29 @@
+--- origsrc/kmix-17.12.3/CMakeLists.txt	2018-03-05 18:18:14.000000000 -0600
++++ src/kmix-17.12.3/CMakeLists.txt	2018-03-13 22:03:13.788827600 -0500
+@@ -233,7 +233,7 @@ if (CANBERRA_FOUND)
+   target_link_libraries(kdeinit_kmix ${CANBERRA_LIBRARIES})
+ endif (CANBERRA_FOUND)
+ 
+-install(TARGETS kdeinit_kmix DESTINATION ${KDE_INSTALL_LIBDIR} )
++install(TARGETS kdeinit_kmix DESTINATION ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
+ 
+ target_link_libraries( kmix kdeinit_kmix )
+ install(TARGETS kmix ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
+@@ -264,7 +264,7 @@ install(FILES org.kde.kmix.appdata.xml D
+ 
+ #qt4_add_dbus_adaptor(kded_kmixd_SRCS org.kde.KMixD.xml kmixd.h Mixer)
+ 
+-add_library(kded_kmixd ${kded_kmixd_SRCS})
++add_library(kded_kmixd MODULE ${kded_kmixd_SRCS})
+ 
+ 
+ target_link_libraries(kded_kmixd
+@@ -360,7 +360,7 @@ add_subdirectory( plasma )
+ ####################################################################################################
+ ########### INSTALL RULES ##########################################################################
+ ####################################################################################################
+-install( TARGETS kdeinit_kmixctrl  DESTINATION ${KDE_INSTALL_LIBDIR} )
++install( TARGETS kdeinit_kmixctrl  DESTINATION ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
+ 
+ target_link_libraries( kmixctrl kdeinit_kmixctrl )
+ install( TARGETS kmixctrl ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
